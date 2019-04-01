@@ -23,16 +23,16 @@ openshift_deployment_type=openshift-enterprise
 
 # host group for nfs
 [nfs]
-openshiftapp2.mabiaf.com
+openshiftapp2.mabiaf.com ansible_connection=local
 
 # host group for masters
 [masters]
-openshiftapp2.mabiaf.com
+openshiftapp2.mabiaf.com ansible_connection=local
 
 # host group for etcd
 [etcd]
-openshiftapp2.mabiaf.com 
+openshiftapp2.mabiaf.com ansible_connection=local
 
 # host group for nodes, includes region info
 [nodes]
-openshiftapp2.mabiaf.com openshift_node_group_name='node-config-all-in-one' openshift_node_problem_detector_install=true
+openshiftapp2.mabiaf.com ansible_connection=local openshift_node_group_name='node-config-all-in-one' openshift_node_problem_detector_install=true
